@@ -1,23 +1,24 @@
-import logo from './logo.svg';
+
 import './App.css';
 
+import React, { useState } from 'react';
+
 function App() {
+
+  let [ counterNum, setCounterNum ] = useState(0)
+  window.setCounterNum = setCounterNum
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+            {counterNum}        
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+
       </header>
+      <button onClick= {() => setCounterNum + 1} className='add-num'>Add</button>
+      <button onClick= {() => setCounterNum - 1} className='subract-num'>Subtract</button>
+
     </div>
   );
 }
