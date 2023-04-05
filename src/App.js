@@ -16,8 +16,6 @@ function App() {
         </p>
 
       </header>
-      <button onClick= {() => setCounterNum + 1} className='add-num'>Add</button>
-      <button onClick= {() => setCounterNum - 1} className='subract-num'>Subtract</button>
 
     </div>
   );
